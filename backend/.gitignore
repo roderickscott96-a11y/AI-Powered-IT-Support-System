@@ -1,0 +1,3 @@
+node_modules/
+tickets.db
+.env

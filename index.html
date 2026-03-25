@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI IT Support System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI IT Support System</h1>
+            <p class="subtitle">Submit and track IT support tickets</p>
+        </header>
+
+        <section class="dashboard-section">
+            <div class="dashboard-card">
+                <h3>Total Tickets</h3>
+                <p id="totalTickets">0</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Open Tickets</h3>
+                <p id="openTickets">0</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Closed Tickets</h3>
+                <p id="closedTickets">0</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>High Priority</h3>
+                <p id="highPriorityTickets">0</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Create a Ticket</h2>
+            <form id="ticketForm">
+                <input type="text" id="userName" placeholder="Your Name" required />
+                <input type="text" id="issueTitle" placeholder="Issue Title" required />
+
+                <select id="issueCategory" required>
+                    <option value="">Select Category</option>
+                    <option value="Password Reset">Password Reset</option>
+                    <option value="WiFi Issue">WiFi Issue</option>
+                    <option value="Software Installation">Software Installation</option>
+                    <option value="Printer Problem">Printer Problem</option>
+                    <option value="Email Access">Email Access</option>
+                    <option value="Hardware Issue">Hardware Issue</option>
+                </select>
+
+                <select id="priority" required>
+                    <option value="">Select Priority</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <textarea id="issueDescription" placeholder="Describe the issue..." rows="5" required></textarea>
+
+                <button type="submit">Submit Ticket</button>
+            </form>
+        </section>
+
+        <section class="filter-section">
+            <h2>Search and Filter Tickets</h2>
+
+            <input type="text" id="searchInput" placeholder="Search by title, user, or description" />
+            <select id="sortOption">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+            </select>
+
+            <button id="exportBtn">Export Tickets</button>
+            <select id="filterCategory">
+                <option value="All">All Categories</option>
+                <option value="Password Reset">Password Reset</option>
+                <option value="WiFi Issue">WiFi Issue</option>
+                <option value="Software Installation">Software Installation</option>
+                <option value="Printer Problem">Printer Problem</option>
+                <option value="Email Access">Email Access</option>
+                <option value="Hardware Issue">Hardware Issue</option>
+            </select>
+
+            <select id="filterPriority">
+                <option value="All">All Priorities</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+        </section>
+        <section class="ai-section">
+            <h2>AI Troubleshooting Assistant</h2>
+            <button id="getAiHelpBtn" type="button">Get AI Suggestion</button>
+            <div id="aiResult"></div>
+        </section>
+        <section class="tickets-section">
+            <h2>Submitted Tickets</h2>
+            <div id="ticketList"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
