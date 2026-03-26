@@ -1,0 +1,5 @@
+backend/node_modules/
+backend/tickets.db
+node_modules/
+tickets.db
+.env
